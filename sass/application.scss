@@ -286,42 +286,131 @@ i.supplier-dropdown-button {
       width: 10%;
     }
   }
+}
 
-  .recommendations {
-    margin-top: 50px;
 
-    .recommendation {
+/* wrapper for welcome page */
+#welcome {
+  margin: 20px 3%;
+  padding-bottom: 50px;
+  min-width: 768px;
+
+  #title-greeting {
+      font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  
+  #welcome-buttons {
+  
+  }
+  
+  button.welcome {
+      border: 1px dashed #000000;
       padding: 20px;
-      width: 700px;
-      background-color: #E4F1DF;
-      margin-top: 20px;
-      border-radius: 8px;
+      cursor: pointer;
+      width: 190px;
+      height: 110px;
+      margin: 10px;
+  }
+}
 
-      .text {
-        font-size: 1.2em;
 
-        .text-bullet {
-          margin-left: 10px;
-          &:before {
-            content: '- ';
-          }
-        }
-      }
+/* active shipments css */
+#active {
+  margin: 20px 3%;
+  padding-bottom: 50px;
+  min-width: 768px;
 
-      .buttons {
-        float: right;
-        font-size: 1.5em;
-        .button {
-          display: inline-block;
+  h1 {
+      font-family: Verdana, Geneva, sans-serif;
+  }
+
+  h3.shipment {
+      text-decoration: underline;
+  }
+  
+  div.shipment {
+      border: 1px solid #000000;
+      background-color: #CFE2FC;
+      padding: 12px 15px 20px 15px;
+      margin: 10px;
+  }
+
+  div.shipment-late {
+      border: 1px solid #000000;
+      background-color: #FF9999;
+      padding: 12px 15px 20px 15px;
+      margin: 10px;
+  }
+  
+  div.shipment-leftbox {
+      margin: 4px;
+      float: left;
+  }
+  
+  div.shipment-rightbox {
+      margin: 4px;
+      float: right;
+  }
+  
+  p.shipment-items {
+      font-size: 16pt;
+  }
+  
+  p.shipment-morelink {
+      font-size: 16pt;
+      margin-top: 22px;
+      text-decoration: underline;
+  }
+  
+  p.shipment-details {
+      margin: 2px 0px;
+  }
+  
+  p.shipment-details-supplier {
+      text-decoration: underline;
+      margin: 2px 0px;
+  }
+  
+  p.shipment-details-link {
+      margin: 2px 0px;
+      text-decoration: underline;
+  }
+}
+
+.recommendations {
+  margin-top: 50px;
+
+  .recommendation {
+    padding: 20px;
+    width: 700px;
+    background-color: #E4F1DF;
+    margin-top: 20px;
+    border-radius: 8px;
+
+    .text {
+      font-size: 1.2em;
+
+      .text-bullet {
+        margin-left: 10px;
+        &:before {
+          content: '- ';
         }
       }
     }
-  }
 
+    .buttons {
+      float: right;
+      font-size: 1.5em;
+      .button {
+        display: inline-block;
+      }
+    }
+  }
 }
 
-#order-history {
 
+#order-history {
 	#order-history-header {
 
 		clear: both;
@@ -360,5 +449,4 @@ i.supplier-dropdown-button {
 
 
 	}
-
 }

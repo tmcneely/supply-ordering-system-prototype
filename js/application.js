@@ -11,14 +11,14 @@ $(document).ready(function() {
 
 	  var currentBreadcrumb = $("#breadcrumbs").find(".active");
 	  var currentSection = currentBreadcrumb.attr("data-section");
-	  $('#'+currentSection).hide();
+	  $('#'+currentSection).hide(200);
 	  currentBreadcrumb.removeClass("active");
 
 	  if(currentSection == "view-summary") return;
 
 	  var nextBreadcrumb = currentBreadcrumb.next();
 	  var nextSection = nextBreadcrumb.attr("data-section");
-	  $('#'+nextSection).show();
+	  $('#'+nextSection).show(200);
 	  nextBreadcrumb.addClass("active");
 	});
 
@@ -43,12 +43,12 @@ $(document).ready(function() {
 	$(".segment.items, .segment.quantities, .segment.suppliers, .segment.summary").bind("click", function() {
 		var currentBreadcrumb = $("#breadcrumbs").find(".active");
 		var currentSection = currentBreadcrumb.attr("data-section");
-		$('#'+currentSection).hide();
+		$('#'+currentSection).hide(200);
 		currentBreadcrumb.removeClass("active");
 
 		var nextBreadcrumb = $(this);
 		var nextSection = nextBreadcrumb.attr("data-section");
-		$('#'+nextSection).show();
+		$('#'+nextSection).show(200);
 		nextBreadcrumb.addClass("active");
 	});
 
@@ -57,4 +57,8 @@ $(document).ready(function() {
 		defaultOpen: 'item1,item3'
 	});
 
+	$('.remove-button').bind("click", function() {
+		var row = $(this).closest(".item-row");
+		row.hide(200);
+	});
 });
