@@ -40,7 +40,19 @@ $(document).ready(function() {
 		$(".cost .text").text("$" + num*4);
 	});
 
-	//collapsible management
+	$(".segment.items, .segment.quantities").bind("click", function() {
+		var currentBreadcrumb = $("#breadcrumbs").find(".active");
+		var currentSection = currentBreadcrumb.attr("data-section");
+		$('#'+currentSection).hide();
+		currentBreadcrumb.removeClass("active");
+
+		var nextBreadcrumb = $(this);
+		var nextSection = nextBreadcrumb.attr("data-section");
+		$('#'+nextSection).show();
+		nextBreadcrumb.addClass("active");
+	});
+
+		//collapsible management
 	$('.collapsible').collapsible({
 		defaultOpen: 'item1,item3'
 	});
