@@ -71,12 +71,12 @@ $(document).ready(function() {
 
 	$('.incoming-shipment-btn').bind("click", function() {
 		hideAll();
-		$("#active-shipments").show();
+		$("#active-shipments").show(200);
 	});
 
 	$('.order-history-btn').bind("click", function() {
 		hideAll();
-		$("#order-history").show();
+		$("#order-history").show(200);
 	});
 
         $('.shipment-details-link').bind("click", function() {
