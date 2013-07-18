@@ -6,7 +6,8 @@
 
 	<title>Teashop Supply Ordering System</title>
 
-	<link rel="stylesheet" href="css/application.css" />
+	<!-- <link rel="stylesheet" href="css/application.css" /> -->
+  <link rel="stylesheet" href="sass/application.scss" />
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
   <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" /> -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -20,16 +21,16 @@
   <div id='main'>
 
     <div id='breadcrumbs'>
-      <div class='segment active'>
+      <div class='segment items active' data-section='add-items'>
         Items
       </div>
-      <div class='segment'>
+      <div class='segment quantities' data-section='set-quantities'>
         Quantities
       </div>
-      <div class='segment'>
+      <div class='segment suppliers' data-section='set-suppliers'>
         Suppliers
       </div>
-      <div class='segment'>
+      <div class='segment summary' data-section='view-summary'>
         Summary
       </div>
     </div>
@@ -54,6 +55,11 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="next-btn">
+      <i class="icon-undo"></i>
+      <div>Next</div>
     </div>
 
   </div>
