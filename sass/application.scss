@@ -39,6 +39,7 @@ body {
 
 #main {
   margin: 20px 3%;
+  padding-bottom: 50px;
   min-width: 768px;
 }
 
@@ -49,6 +50,29 @@ body {
     display: inline-block;
     margin-left: 3%;
   }
+}
+
+.button {
+  background-color: #fafafa;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: #444 1px 1px 2px;
+
+  &:hover {
+    background-color: #eee;
+    cursor: pointer;
+  }
+  &:active {
+    border-color: #999;
+    background-color: #aaa;
+  }
+}
+
+.next-button {
+  float: right;
+  font-size: 1.5em;
+  margin-top: 50px;
 }
 
 .icn-btn {
@@ -68,9 +92,11 @@ body {
   &:active {
     background-color: #ccc;
   }
-}
-i {
+
+  i {
   font-size: 2.0em;
+  }
+
 }
 
 .row-inner {
@@ -97,7 +123,7 @@ i {
     .row-button {
       display: inline-block;
       background-color: #fff;
-      margin-top: 5px;
+      margin-top: 4px;
       padding: 8px 10px;
       border: 1px solid #999;
       border-radius: 8px;
@@ -105,8 +131,7 @@ i {
       box-shadow: #444 1px 1px 2px;
     }
     .remove-button {
-      font-size: 0.8em;
-      padding: 6px 10px;
+      font-size: 1.1em;
     }
   }
 }
