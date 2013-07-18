@@ -8,7 +8,7 @@
 
 	<link rel="stylesheet" href="css/application.css" />
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" />
+  <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" /> -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 
 
@@ -17,38 +17,45 @@
 	
 </head>
 <body>
+  <div id='main'>
 
-  <div id='add-items'>
-    <div class="container">
-      <div id="top-bar" class="row-fluid">
-        <div class="span3">
-          <h3>Add Items</h3>
-        </div>
-        <div class="span4">
-          <form class="navbar-search pull-left">
-            <input type="text" class="search-query" placeholder="Search">
-          </form>
-        </div>
-        <div class="span2">
-          <div class="btn test">
+    <div id='breadcrumbs'>
+      <div class='segment active'>
+        Items
+      </div>
+      <div class='segment'>
+        Quantities
+      </div>
+      <div class='segment'>
+        Suppliers
+      </div>
+      <div class='segment'>
+        Summary
+      </div>
+    </div>
+    <div class="clear"></div>
+
+    <div id='add-items'>
+      <div id="top-bar">
+        <h3 id="page-header">Add Items</h3>
+            <input id="search" type="text" class="search-query" placeholder="Search for items">
+        <div class="buttons">
+          <div class="icn-btn">
             <i class="icon-star"></i>
             <div>Favorites</div>
           </div>
-        </div>
-        <div class="span1">
-          <div class="btn">
+          <div class="icn-btn">
             <i class="icon-undo"></i>
             <div>Undo</div>
           </div>
-        </div>
-        <div class="span1">
-          <div class="btn">
+          <div class="icn-btn">
             <i class="icon-rotate-right"></i>
             <div>Redo</div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 
 </body>
