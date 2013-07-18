@@ -293,24 +293,24 @@ i.supplier-dropdown-button {
   margin: 20px 3%;
   padding-bottom: 50px;
   min-width: 768px;
-}
 
-#title-greeting {
-    font-family: Verdana, Geneva, sans-serif;
-}
-
-
-#welcome-buttons {
-
-}
-
-button.welcome {
-    border: 1px dashed #000000;
-    padding: 20px;
-    cursor: pointer;
-    width: 190px;
-    height: 110px;
-    margin: 10px;
+  #title-greeting {
+      font-family: Verdana, Geneva, sans-serif;
+  }
+  
+  
+  #welcome-buttons {
+  
+  }
+  
+  button.welcome {
+      border: 1px dashed #000000;
+      padding: 20px;
+      cursor: pointer;
+      width: 190px;
+      height: 110px;
+      margin: 10px;
+  }
 }
 
 
@@ -319,48 +319,62 @@ button.welcome {
   margin: 20px 3%;
   padding-bottom: 50px;
   min-width: 768px;
-}
 
-h3.shipment {
-    text-decoration: underline;
-}
+  h1 {
+      font-family: Verdana, Geneva, sans-serif;
+  }
 
-div.shipment {
-    border: 1px solid #000000;
-    background-color: #CFE2FC;
-    padding: 5px 15px 5px 15px;
-    margin: 10px;
-}
+  h3.shipment {
+      text-decoration: underline;
+  }
+  
+  div.shipment {
+      border: 1px solid #000000;
+      background-color: #CFE2FC;
+      padding: 12px 15px 20px 15px;
+      margin: 10px;
+  }
 
-div.shipment-leftbox {
-    border: 1px solid #000000;
-    float: left;
-}
-
-div.shipment-rightbox {
-    border: 1px solid #000000;
-    float: right;
-}
-
-p.shipment-items {
-    font-size: 16pt;
-}
-
-p.shipment-morelink {
-    font-size: 16pt;
-    text-decoration: underline;
-}
-
-p.shipment-details {
-
-}
-
-p.shipment-details-supplier {
-
-}
-
-p.shipment-details-link {
-
+  div.shipment-late {
+      border: 1px solid #000000;
+      background-color: #FF9999;
+      padding: 12px 15px 20px 15px;
+      margin: 10px;
+  }
+  
+  div.shipment-leftbox {
+      margin: 4px;
+      float: left;
+  }
+  
+  div.shipment-rightbox {
+      margin: 4px;
+      float: right;
+  }
+  
+  p.shipment-items {
+      font-size: 16pt;
+  }
+  
+  p.shipment-morelink {
+      font-size: 16pt;
+      margin-top: 22px;
+      text-decoration: underline;
+  }
+  
+  p.shipment-details {
+      margin: 2px 0px;
+  }
+  
+  p.shipment-details-supplier {
+      text-decoration: underline;
+      margin: 2px 0px;
+  }
+  
+  p.shipment-details-link {
+      margin: 2px 0px;
+      text-decoration: underline;
+  }
 }
 
 .recommendations {
