@@ -303,7 +303,7 @@ i.supplier-dropdown-button {
   
   }
   
-  button.welcome {
+  button {
       border: 1px dashed #000000;
       padding: 20px;
       cursor: pointer;
@@ -315,7 +315,7 @@ i.supplier-dropdown-button {
 
 
 /* active shipments css */
-#active {
+#active-shipments {
   margin: 20px 3%;
   padding-bottom: 50px;
   min-width: 768px;
@@ -449,3 +449,4 @@ i.supplier-dropdown-button {
 
 	}
 }
+

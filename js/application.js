@@ -86,7 +86,7 @@ $(document).ready(function() {
         $('.shipment-morelink').bind("click", function() {
             $('.shipment-morelink').hide();
 
-            $('#active').find('.more').slideDown();
+            $('#active-shipments').find('.more').slideDown();
 
         });
 
