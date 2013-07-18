@@ -24,12 +24,20 @@ $(document).ready(function() {
 		var row = $(this).closest(".item-row");
 		var id = row.attr("data-id");
 		
-		var num = $("div[data-id=" +id+ "] .quantity").text();
+		var num = Number($("div[data-id=" +id+ "] .quantity").text());
 		num--;
+
+		var cost = Number($("div[data-id=" +id+ "] .cost .number").text())/num;
+		if(num == 0){
+			cost = 0;
+		}
+		var per_order = $("div[data-id=" +id+ "] .per-order .number").text();
+		// var unit = $("div[data-id=" +id+ "] .per-order .unit").text();
+
 		if(num >=0) {
 			$("div[data-id=" +id+ "] .quantity").text(num);
-			$("div[data-id=" +id+ "] .total-amount .text").text(num*50);
-			$("div[data-id=" +id+ "] .cost .text").text("$" + num*4);
+			$("div[data-id=" +id+ "] .total-amount .number").text(num*per_order);
+			$("div[data-id=" +id+ "] .cost .number").text(num*cost);
 		}
 
 		// var num = $(".quantity").text();
@@ -45,11 +53,14 @@ $(document).ready(function() {
 		var row = $(this).closest(".item-row");
 		var id = row.attr("data-id");
 		var num = $("div[data-id=" +id+ "] .quantity").text();
+		var cost = Number($("div[data-id=" +id+ "] .cost .number").text())/num;
 		
 		num++;
+
+		var per_order = $("div[data-id=" +id+ "] .per-order .number").text();
 		$("div[data-id=" +id+ "] .quantity").text(num);
-		$("div[data-id=" +id+ "] .total-amount .text").text(num*50);
-		$("div[data-id=" +id+ "] .cost .text").text("$" + num*4);
+		$("div[data-id=" +id+ "] .total-amount .number").text(num*per_order);
+		$("div[data-id=" +id+ "] .cost .number").text(num*cost);
 	});
 
 	$(".segment.items, .segment.quantities, .segment.suppliers, .segment.summary").bind("click", function() {
