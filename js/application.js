@@ -61,4 +61,16 @@ $(document).ready(function() {
 		var row = $(this).closest(".item-row");
 		row.hide(200);
 	});
+
+        $('.shipment-details-link').bind("click", function() {
+            $('.shipment-late').slideUp();
+        });
+
+        $('.shipment-morelink').bind("click", function() {
+            $('.shipment-morelink').hide();
+
+            $('#active').find('.more').slideDown();
+
+        });
+
 });
