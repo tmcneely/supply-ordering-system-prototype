@@ -84,11 +84,10 @@ $(document).ready(function() {
         });
 
         $('.shipment-morelink').bind("click", function() {
-            $('.shipment-morelink').hide();
-
-            $('#active-shipments').find('.more').slideDown();
-
+            $('.shipment-morelink').slideUp("fast", "linear", function () { $('#active-shipments').find('.more').slideDown(400, "swing", null); });
         });
+
+        $('.shipment-details-supplier').tooltip();
 
 	function hideAll()
 	{
