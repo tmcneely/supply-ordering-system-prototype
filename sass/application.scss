@@ -43,14 +43,14 @@ body {
   min-width: 768px;
 }
 
-#set-quantities {
+#set-quantities, #set-suppliers {
   display: none;
 }
 
 .top-bar {
   margin-top: 30px;
   .buttons {
-    display: inline-block;
+    float: right;
     margin-left: 3%;
   }
 }
@@ -118,6 +118,7 @@ body {
   height: 50px;
   padding: 0 20px;
   background-color: #CFE2FC;
+  border-radius: 4px;
 
   .text {
     display: inline-block;
@@ -206,10 +207,6 @@ i.supplier-dropdown-button {
 
 #set-quantities {
 
-  .page-title {
-    margin-right: 42%;
-  }
-
   .name {
     width: 25%;
   }
@@ -232,3 +229,93 @@ i.supplier-dropdown-button {
     margin: 0 20px;
   }
 }
+
+
+#set-suppliers {
+
+  .item-list {
+    .name {
+      width: 25%;
+    }
+    .cost {
+      width: 15%
+    }
+    .delivery {
+      width: 20%;
+    }
+    .supplier {
+      width: 30%;
+    }
+    .row-buttons {
+      width: 10%;
+    }
+  }
+
+
+  h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .supplier-charges {
+    margin-top: 50px;
+
+    .item-row {
+      background-color: #eee;
+
+      .surcharge {
+        font-weight: bold;
+        color: #f00;
+      }
+    }
+
+    .name {
+      width: 25%;
+    }
+    .current {
+      width: 20%;
+    }
+    .required {
+      width: 20%;
+    }
+    .surcharge {
+      width: 20%;
+    }
+    .total {
+      width: 10%;
+    }
+  }
+
+  .recommendations {
+    margin-top: 50px;
+
+    .recommendation {
+      padding: 20px;
+      width: 700px;
+      background-color: #E4F1DF;
+      margin-top: 20px;
+      border-radius: 8px;
+
+      .text {
+        font-size: 1.2em;
+
+        .text-bullet {
+          margin-left: 10px;
+          &:before {
+            content: '- ';
+          }
+        }
+      }
+
+      .buttons {
+        float: right;
+        font-size: 1.5em;
+        .button {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+}
+
