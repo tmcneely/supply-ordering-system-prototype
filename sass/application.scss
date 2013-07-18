@@ -78,10 +78,30 @@ body {
   }
 }
 
+.cost-summary {
+  float: left;
+  margin-top: 50px;
+
+  .subtotal {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+  .total {
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  .subtext {
+    margin-top: 7px;
+    font-size: 0.8;
+    color: #666;
+  }
+}
+
 .next-button {
+  clear: left;
   float: right;
   font-size: 1.5em;
-  margin-top: 50px;
+  margin-top: -30px;
 }
 
 .icn-btn {
@@ -203,6 +223,10 @@ i.supplier-dropdown-button {
       .row-buttons {
         width: 10%;
       }
+    }
+
+    .next-button {
+      margin-top: 50px;
     }
 }
 
