@@ -463,22 +463,32 @@ i.supplier-dropdown-button {
 	.collapsible {
 		padding:10pt;
 		height:20pt;
-	}
-
-	.collapse-open {
-		background:#cecece;
-	}
-
-	.collapse-close {
-                background:#ffffff;
 
                 &:hover {
                     background:#d5d5d5;
                 }
 	}
 
+	.collapse-open {
+		background:#f0f0f0;
+
+              span {
+                padding: 10px;
+                background:url(img/black-chevron-down.png) center center no-repeat;
+              }
+	}
+
+	.collapse-close {
+		background:#ffffff;
+
+          span {
+            padding: 10px;
+            background:url(img/black-chevron-right.png) center center no-repeat;
+          }
+	}
+
 	.container {
-                background:#cecece;
+                background:#f0f0f0;
 		padding:0;
 		margin:0;
                 width: 100%;
@@ -489,6 +499,39 @@ i.supplier-dropdown-button {
 		padding:10px;
 		font-size:.9em;
 		line-height:1.5em;
-	}
+		background:#f0f0f0;
+
+      .supplier-row {
+
+        .supplier-name {
+
+        }
+
+        .surcharge {
+
+        }
+
+        .receipt-btn {
+
+        }
+
+        .supplier-items-list {
+
+
+          .supplier-item {
+
+            .supplier-item-name {
+
+            }
+
+            .supplier-item-cost {
+
+            }
+          }
+        }
+
+      }
+
+		}
 }
 

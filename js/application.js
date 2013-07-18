@@ -50,7 +50,7 @@ $(document).ready(function() {
 		nextBreadcrumb.addClass("active");
 	});
 
-		//collapsible management
+	//collapsible management
 	$('.collapsible').collapsible({
 		defaultOpen: 'item1,item3'
 	});
