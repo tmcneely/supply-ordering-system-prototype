@@ -8,14 +8,14 @@ $(document).ready(function() {
 
 	  var currentBreadcrumb = $("#breadcrumbs").find(".active");
 	  var currentSection = currentBreadcrumb.attr("data-section");
-	  $(currentSection).hide();
+	  $('#'+currentSection).hide();
 	  currentBreadcrumb.removeClass("active");
 
 	  if(currentSection == "view-summary") return;
 
 	  var nextBreadcrumb = currentBreadcrumb.next();
 	  var nextSection = nextBreadcrumb.attr("data-section");
-	  $(nextSection).show();
+	  $('#'+nextSection).show();
 	  nextBreadcrumb.addClass("active");
 	});
 });
