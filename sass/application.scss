@@ -448,14 +448,14 @@ i.supplier-dropdown-button {
 		clear: both;
 		display: block;
 
-                h1 {
-                    float:left;
-                  font-family: Verdana, Geneva, sans-serif;
-                }
+    h1 {
+      float:left;
+      font-family: Verdana, Geneva, sans-serif;
+    }
 
 		#order-search {
 			float: right;
-                        margin-top: 18px;
+      margin-top: 18px;
 //			display: block;
 		}
 	}
@@ -464,34 +464,36 @@ i.supplier-dropdown-button {
 		padding:10pt;
 		height:20pt;
 
-                &:hover {
-                    background:#d5d5d5;
-                }
+    &:hover {
+        background:#d5d5d5;
+    }
 	}
 
 	.collapse-open {
 		background:#f0f0f0;
 
-              span {
-                padding: 10px;
-                background:url(img/black-chevron-down.png) center center no-repeat;
-              }
+    span {
+      padding: 10px;
+      margin-right: 10px;
+      background:url(../img/black-chevron-down.png) center center no-repeat;
+    }
 	}
 
 	.collapse-close {
 		background:#ffffff;
 
-          span {
-            padding: 10px;
-            background:url(img/black-chevron-right.png) center center no-repeat;
-          }
+    span {
+      padding: 10px;
+      margin-right: 10px;
+      background:url(../img/black-chevron-right.png) center center no-repeat;
+    }
 	}
 
 	.container {
-                background:#f0f0f0;
+    background:#f0f0f0;
 		padding:0;
 		margin:0;
-                width: 100%;
+    width: 100%;
 	}
 
 	.content {
@@ -534,4 +536,3 @@ i.supplier-dropdown-button {
 
 		}
 }
-
