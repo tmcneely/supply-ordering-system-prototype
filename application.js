@@ -35,7 +35,7 @@ $(document).ready(function() {
 	$(".icon-plus").bind("click", function() {
 		var num = $(".quantity").text();
 		num++;
-		$(".quantity").text(num);
+		$(".quantity").text(num);	
 		$(".total-amount .text").text(num*50);
 		$(".cost .text").text("$" + num*4);
 	});
@@ -51,10 +51,4 @@ $(document).ready(function() {
 		$('#'+nextSection).show();
 		nextBreadcrumb.addClass("active");
 	});
-
-		//collapsible management
-	$('.collapsible').collapsible({
-		defaultOpen: 'item1,item3'
-	});
-
 });
