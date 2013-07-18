@@ -21,21 +21,35 @@ $(document).ready(function() {
 	});
 
 	$(".icon-minus").bind("click", function() {
-		var num = $(".quantity").text();
+		var row = $(this).closest(".item-row");
+		var id = row.attr("data-id");
+		
+		var num = $("div[data-id=" +id+ "] .quantity").text();
 		num--;
 		if(num >=0) {
-			$(".quantity").text(num);
-			$(".total-amount .text").text(num*50);
-			$(".cost .text").text("$" + num*4);
+			$("div[data-id=" +id+ "] .quantity").text(num);
+			$("div[data-id=" +id+ "] .total-amount .text").text(num*50);
+			$("div[data-id=" +id+ "] .cost .text").text("$" + num*4);
 		}
+
+		// var num = $(".quantity").text();
+		// num--;
+		// if(num >=0) {
+		// 	$(".quantity").text(num);
+		// 	$(".total-amount .text").text(num*50);
+		// 	$(".cost .text").text("$" + num*4);
+		// }
 	});
 
 	$(".icon-plus").bind("click", function() {
-		var num = $(".quantity").text();
+		var row = $(this).closest(".item-row");
+		var id = row.attr("data-id");
+		var num = $("div[data-id=" +id+ "] .quantity").text();
+		
 		num++;
-		$(".quantity").text(num);
-		$(".total-amount .text").text(num*50);
-		$(".cost .text").text("$" + num*4);
+		$("div[data-id=" +id+ "] .quantity").text(num);
+		$("div[data-id=" +id+ "] .total-amount .text").text(num*50);
+		$("div[data-id=" +id+ "] .cost .text").text("$" + num*4);
 	});
 
 	$(".segment.items, .segment.quantities, .segment.suppliers, .segment.summary").bind("click", function() {
@@ -79,15 +93,15 @@ $(document).ready(function() {
 		$("#order-history").show(200);
 	});
 
-        $('.shipment-details-link').bind("click", function() {
-            $('.shipment-late').slideUp();
-        });
+    $('.shipment-details-link').bind("click", function() {
+        $('.shipment-late').slideUp();
+    });
 
-        $('.shipment-morelink').bind("click", function() {
-            $('.shipment-morelink').slideUp("fast", "linear", function () { $('#active-shipments').find('.more').slideDown(400, "swing", null); });
-        });
+    $('.shipment-morelink').bind("click", function() {
+        $('.shipment-morelink').slideUp("fast", "linear", function () { $('#active-shipments').find('.more').slideDown(400, "swing", null); });
+    });
 
-        $('.shipment-details-supplier').tooltip();
+    $('.shipment-details-supplier').tooltip();
 
 	function hideAll()
 	{
