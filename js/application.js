@@ -1,11 +1,9 @@
 $(document).ready(function() {
-	// $("#add-items").hide();
 	$("#set-quantities").hide();
-
-	$(".test").bind("click", function() {
-	  console.log("Fuck yeah!");
-	  $(this).hide();
-	});
+	$("#set-suppliers").hide();
+	$("#main").hide();
+	$("#active-shipments").hide();
+	$("#order-history").hide();
 
 	$(".next-button").bind("click", function() {
 
@@ -61,4 +59,42 @@ $(document).ready(function() {
 		var row = $(this).closest(".item-row");
 		row.hide(200);
 	});
+
+	$('.new-order-btn').bind("click", function() {
+		hideAll();
+		$("#main").show(200);
+	});
+
+	$('.saved-order-btn').bind("click", function() {
+		hideAll();
+	});
+
+	$('.incoming-shipment-btn').bind("click", function() {
+		hideAll();
+		$("#active-shipments").show();
+	});
+
+	$('.order-history-btn').bind("click", function() {
+		hideAll();
+		$("#order-history").show();
+	});
+
+        $('.shipment-details-link').bind("click", function() {
+            $('.shipment-late').slideUp();
+        });
+
+        $('.shipment-morelink').bind("click", function() {
+            $('.shipment-morelink').hide();
+
+            $('#active-shipments').find('.more').slideDown();
+
+        });
+
+	function hideAll()
+	{
+		$("#welcome").hide();
+		$("#main").hide();
+		$("#active-shipments").hide();
+		$("#order-history").hide();
+	}
 });
