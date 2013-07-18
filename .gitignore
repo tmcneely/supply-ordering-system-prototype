@@ -1,5 +1,4 @@
 # We are using SASS to compile our css
 .sass-cache
-css
-*.css
+css/*
 .DS_Store

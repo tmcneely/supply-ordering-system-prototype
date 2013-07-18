@@ -43,13 +43,22 @@ body {
   min-width: 768px;
 }
 
+#set-quantities, #set-suppliers {
+  display: none;
+}
 
 .top-bar {
   margin-top: 30px;
   .buttons {
-    display: inline-block;
+    float: right;
     margin-left: 3%;
   }
+}
+
+.page-title {
+  float: left;
+  margin-right: 20px;
+  line-height: 1.8;
 }
 
 .button {
@@ -108,7 +117,8 @@ body {
 .item-row {
   height: 50px;
   padding: 0 20px;
-  // overflow: auto;
+  background-color: #CFE2FC;
+  border-radius: 4px;
 
   .text {
     display: inline-block;
@@ -155,11 +165,6 @@ i.supplier-dropdown-button {
 }
 
 #add-items {
-    #page-header {
-      float: left;
-      margin-right: 20px;
-      line-height: 1.8;
-    }
 
     #search {
       width: 35%;
@@ -179,7 +184,7 @@ i.supplier-dropdown-button {
       margin-top: 30px;
 
       .item-row {
-        background-color: #CFE2FC;
+        
       }
 
       .name {
@@ -198,7 +203,88 @@ i.supplier-dropdown-button {
         width: 10%;
       }
     }
+}
 
+#set-quantities {
+
+  .name {
+    width: 25%;
+  }
+  .per-order {
+    width: 20%
+  }
+  .number {
+    width: 25%;
+  }
+  .total-amount {
+    width: 20%;
+  }
+  .cost {
+    width: 10%;
+  }
+
+  .plus-minus-button {
+    padding: 5px 7px;
+    border-radius: 15px;
+    margin: 0 20px;
+  }
+}
+
+
+#set-suppliers {
+
+  .item-list {
+    .name {
+      width: 25%;
+    }
+    .cost {
+      width: 15%
+    }
+    .delivery {
+      width: 20%;
+    }
+    .supplier {
+      width: 30%;
+    }
+    .row-buttons {
+      width: 10%;
+    }
+  }
+
+
+  h4 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .supplier-charges {
+    margin-top: 50px;
+
+    .item-row {
+      background-color: #eee;
+
+      .surcharge {
+        font-weight: bold;
+        color: #f00;
+      }
+    }
+
+    .name {
+      width: 25%;
+    }
+    .current {
+      width: 20%;
+    }
+    .required {
+      width: 20%;
+    }
+    .surcharge {
+      width: 20%;
+    }
+    .total {
+      width: 10%;
+    }
+  }
 }
 
 
@@ -275,4 +361,77 @@ p.shipment-details-supplier {
 
 p.shipment-details-link {
 
+}
+
+.recommendations {
+  margin-top: 50px;
+
+  .recommendation {
+    padding: 20px;
+    width: 700px;
+    background-color: #E4F1DF;
+    margin-top: 20px;
+    border-radius: 8px;
+
+    .text {
+      font-size: 1.2em;
+
+      .text-bullet {
+        margin-left: 10px;
+        &:before {
+          content: '- ';
+        }
+      }
+    }
+
+    .buttons {
+      float: right;
+      font-size: 1.5em;
+      .button {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+#order-history {
+	#order-history-header {
+
+		clear: both;
+		display: block;
+
+		#order-search {
+			float: right;
+			display: block;
+		}
+	}
+
+	.collapsible {
+		padding:10pt;
+		height:20pt;
+
+		.collapse-open {
+			background:#cecece;
+		}
+
+		.collapse-close {
+			background:#cecece;
+		}
+
+		.container {
+			padding:0;
+			margin:0;
+		}
+
+		.content {
+			background:#f0f0f0;
+			margin: 0;
+			padding:10px;
+			font-size:.9em;
+			line-height:1.5em;
+		}
+
+
+	}
 }
