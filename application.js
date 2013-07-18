@@ -4,8 +4,7 @@ $(document).ready(function() {
 	  $(this).hide();
 	});
 
-	$(".next-btn").bind("click", function() {
-	  console.log("Next button clicked.");
+	$(".next-button").bind("click", function() {
 
 	  var currentBreadcrumb = $("#breadcrumbs").find(".active");
 	  var currentSection = currentBreadcrumb.attr("data-section");
