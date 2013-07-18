@@ -78,10 +78,30 @@ body {
   }
 }
 
+.cost-summary {
+  float: left;
+  margin-top: 50px;
+
+  .subtotal {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+  .total {
+    font-weight: bold;
+    font-size: 1.8em;
+  }
+  .subtext {
+    margin-top: 7px;
+    font-size: 0.8;
+    color: #666;
+  }
+}
+
 .next-button {
+  clear: left;
   float: right;
   font-size: 1.5em;
-  margin-top: 50px;
+  margin-top: -30px;
 }
 
 .icn-btn {
@@ -116,6 +136,7 @@ body {
 
 .item-row {
   height: 50px;
+  margin-bottom: 10px;
   padding: 0 20px;
   background-color: #CFE2FC;
   border-radius: 4px;
@@ -123,7 +144,7 @@ body {
   .text {
     display: inline-block;
     margin-top: 12px;
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   .row-buttons {
@@ -154,7 +175,7 @@ i.supplier-dropdown-button {
 }
 
 .header-row {
-  font-size: 1.4em;
+  font-size: 1.6em;
   padding: 0 20px;
   margin-bottom: 15px;
   clear: both;
@@ -169,6 +190,7 @@ i.supplier-dropdown-button {
     #search {
       width: 35%;
       overflow: auto;
+      margin-top: 18px;
       margin-bottom: 35px;
     }
 
@@ -202,6 +224,10 @@ i.supplier-dropdown-button {
       .row-buttons {
         width: 10%;
       }
+    }
+
+    .next-button {
+      margin-top: 50px;
     }
 }
 
@@ -266,6 +292,10 @@ i.supplier-dropdown-button {
       .surcharge {
         font-weight: bold;
         color: #f00;
+        &.disabled {
+          font-weight: normal;
+          color: inherit;
+        }
       }
     }
 
