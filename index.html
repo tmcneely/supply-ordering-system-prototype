@@ -13,7 +13,8 @@
 
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script type="text/javascript" src="application.js"></script>
+  <script type="text/javascript" src="js/jquery.collapsible.min.js"></script>
+  <script type="text/javascript" src="js/application.js"></script>
 	
 </head>
 <body>
@@ -116,7 +117,42 @@
           Next
           <i class="icon-arrow-right"></i>
         </div>
-      </div>        
+      </div>
+
+      <div class="clear"></div>
+
+      <div id='order-history'>
+
+    	<div id='order-history-header'>
+			<h3 id='page-header'>Order History</h3>
+			<input id="order-search" type="text" class="search-query" placeholder="Search for past orders" />
+		</div>
+
+		<div class="collapsible" id="item1"><i class="icon-chevron-right"></i>Item 1</div>
+		<div class="container">
+			<div class="content">
+				<div>Sample Content</div>
+				<p>Content here....</p>
+			</div>
+		</div>
+
+		<div class="collapsible" id="item2"><i class="icon-chevron-right"></i>Item 2</div>
+		<div class="container">
+			<div class="content">
+				<div>Sample Content</div>
+				<p>Content here....</p>
+			</div>
+		</div>
+
+		<div class="collapsible" id="item3"><i class="icon-chevron-right"></i>Item 3</div>
+		<div class="container">
+			<div class="content">
+				<div>Sample Content</div>
+				<p>Content here....</p>
+			</div>
+		</div>
+
+	</div>
 
     </div>
 

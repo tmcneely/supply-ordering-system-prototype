@@ -18,4 +18,10 @@ $(document).ready(function() {
 	  $(nextSection).show();
 	  nextBreadcrumb.addClass("active");
 	});
+
+	//collapsible management
+	$('.collapsible').collapsible({
+		defaultOpen: 'item1,item3'
+	});
+
 });
