@@ -427,10 +427,20 @@ i.supplier-dropdown-button {
 
 		.collapse-open {
 			background:#cecece;
+
+      span {
+        padding: 10px;
+        background:url(img/black-chevron-down.png) center center no-repeat;
+      }
 		}
 
 		.collapse-close {
-			background:#cecece;
+			background:#ffffff;
+
+      span {
+        padding: 10px;
+        background:url(img/black-chevron-right.png) center center no-repeat;
+      }
 		}
 
 		.container {
@@ -442,11 +452,39 @@ i.supplier-dropdown-button {
 			background:#f0f0f0;
 			margin: 0;
 			padding:10px;
-			font-size:.9em;
-			line-height:1.5em;
+
+      .supplier-row {
+
+        .supplier-name {
+
+        }
+
+        .surcharge {
+
+        }
+
+        .receipt-btn {
+
+        }
+
+        .supplier-items-list {
+
+
+          .supplier-item {
+
+            .supplier-item-name {
+
+            }
+
+            .supplier-item-cost {
+
+            }
+          }
+        }
+
+      }
+
 		}
-
-
 	}
 }
 
