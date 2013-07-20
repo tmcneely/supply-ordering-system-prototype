@@ -33,7 +33,7 @@
       <div class='segment suppliers' data-section='set-suppliers'>
         Suppliers
       </div>
-      <div class='segment summary' data-section='view-summary'>
+      <div class='segment summary' data-section='order-summary'>
         Summary
       </div>
     </div>
@@ -574,7 +574,7 @@
           Total Surcharges: $<span class="total-surcharge-number">15</span>
         </div>
         <div class="total">
-          Total Surcharges: $<span class="total-cost-number">73</span>
+          Order Subtotal: $<span class="total-cost-number">73</span>
         </div>
         <div class ="subtext">
           Not including tax
@@ -588,6 +588,183 @@
       </div>        
       <div class='clear'></div>
     </div>
+
+    <div id='order-summary'>
+      <div class="top-bar">
+        <h3 class="page-title">Order Summary</h3>
+        <div class="buttons">
+          <div class="icn-btn">
+            <i class="icon-undo"></i>
+            <div>Undo</div>
+          </div>
+          <div class="icn-btn">
+            <i class="icon-rotate-right"></i>
+            <div>Redo</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="supplier-list">
+        <div class="clear"></div>
+        <div class="item-row">
+          <div class="row-inner">
+            <div class='supplier'>
+              <div class='text'>Supplier A</div>
+            </div>
+            <div class='surcharge'>
+              <div class="text">$10 Surcharge</div>
+              <div class='help-icon'>
+                <i class="icon-question"></i>
+                <div class='help-box'>
+                  Minimum order of $45 required to clear surcharge.
+                </div>
+              </div>
+            </div>
+            <div class='total'>
+              <div class="text">Total: $55</div>
+            </div>
+          </div>
+        </div>
+        <div class="item-list">
+          <div class="item-row">
+            <div class="row-inner">
+              <div class='name'>
+                <div class='text'>Tea Maker (x1)</div>
+              </div>
+              <div class='delivery'>
+                <div class='text'>Delivery Time: 2 days</div>
+              </div>
+              <div class='cost'>
+                <div class='text'>$20</div>
+              </div>
+              <div class="row-buttons">
+                <div class="row-button remove-button">
+                  <i class="icon-remove"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="item-row">
+            <div class="row-inner">
+              <div class='name'>
+                <div class='text'>Cups (x150)</div>
+              </div>
+              <div class='delivery'>
+                <div class='text'>Delivery Time: 3 days</div>
+              </div>
+              <div class='cost'>
+                <div class='text'>$12</div>
+              </div>
+              <div class="row-buttons">
+                <div class="row-button remove-button">
+                  <i class="icon-remove"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="item-row">
+          <div class="row-inner">
+            <div class='supplier'>
+              <div class='text'>Supplier B</div>
+            </div>
+            <div class='surcharge none'>
+              <div class="text">No Surcharge</div>
+            </div>
+            <div class='total'>
+              <div class="text">Total: $16</div>
+            </div>
+          </div>
+        </div>
+        <div class="item-list">
+          <div class="item-row">
+            <div class="row-inner">
+              <div class='name'>
+                <div class='text'>Milk (16L)</div>
+              </div>
+              <div class='delivery'>
+                <div class='text'>Delivery Time: 2 days</div>
+              </div>
+              <div class='cost'>
+                <div class='text'>$16</div>
+              </div>
+              <div class="row-buttons">
+                <div class="row-button remove-button">
+                  <i class="icon-remove"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item-row">
+          <div class="row-inner">
+            <div class='supplier'>
+              <div class='text'>Supplier C</div>
+            </div>
+            <div class='surcharge'>
+              <div class="text">$5 Surcharge</div>
+              <div class='help-icon'>
+                <i class="icon-question"></i>
+                <div class='help-box'>
+                  Minimum order of $25 required to clear surcharge.
+                </div>
+              </div>
+            </div>
+            <div class='total'>
+              <div class="text">Total: $10</div>
+            </div>
+          </div>
+        </div>
+        <div class="item-list">
+          <div class="item-row">
+            <div class="row-inner">
+              <div class='name'>
+                <div class='text'>Vanilla Syrup (1.5L)</div>
+              </div>
+              <div class='delivery'>
+                <div class='text'>Delivery Time: 2 days</div>
+              </div>
+              <div class='cost'>
+                <div class='text'>$5</div>
+              </div>
+              <div class="row-buttons">
+                <div class="row-button remove-button">
+                  <i class="icon-remove"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="cost-summary">
+        <div class="subtotal">
+          Total Cost of Items: $<span class="total-item-number">58.00</span>
+        </div>
+        <div class="subtotal">
+          Total Surcharges: $<span class="total-surcharge-number">15.00</span>
+        </div>
+        <div class="subtotal">
+          Subtotal: $<span class="subtotal-number">78.00</span>
+        </div>
+        <div class="subtotal">
+          Tax (13%): $<span class="tax-number">10.14</span>
+        </div>
+        <div class="total">
+          Total: $<span class="total-cost-number">88.15</span>
+        </div>
+      </div>
+      <div id="place-order-button" class="next-button">
+        <div class="button">
+          Place Order
+        </div>
+      </div>        
+      <div class='clear'></div>
+    </div>
+
   </div>
 
   <div id='order-history'>

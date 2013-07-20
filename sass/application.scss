@@ -50,7 +50,7 @@ body {
   min-width: 768px;
 }
 
-#set-quantities, #set-suppliers, #main, #active-shipments, #order-history {
+#set-quantities, #set-suppliers, #order-summary, #main, #active-shipments, #order-history {
   display: none;
 }
 
@@ -82,6 +82,47 @@ body {
   &:active {
     border-color: #999;
     background-color: #aaa;
+  }
+}
+
+.help-icon {
+  color: black;
+  text-align: center;
+  height: 20px;
+  width: 18px;
+  padding-right: 2px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: inline-block;
+  background-color: #fcfcfc;
+  border: 1px solid #aaa;
+  box-shadow: 1px 1px 2px black;
+  position: relative;
+
+  .help-box {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s 0.2s, opacity 0.2s ease;
+    position: absolute;
+    bottom: 25px;
+    left: -20px;
+    width: 200px;
+    padding: 10px;
+    background-color: #f9f7f5;
+    border: 1px solid #eee;
+    box-shadow: #444 1px 1px 4px;
+    font-weight: normal;
+    text-align: left;
+    color: #444;
+  }
+
+  &:hover {
+    background-color: #eee;
+    .help-box {
+      visibility: visible;
+      opacity: 1;
+      -webkit-transition-delay: 0;
+    }
   }
 }
 
@@ -370,6 +411,62 @@ i.supplier-dropdown-button {
   }
 }
 
+#order-summary {
+  .supplier-list {
+
+    .item-row {
+      background-color: #eee;
+
+      .supplier {
+        width: 55%;
+      }
+      .surcharge {
+        width: 30%;
+        font-weight: bold;
+        color: red;
+        &.none {
+          font-weight: normal;
+          color: #aaa;
+        }
+      }
+      .total {
+        width: 15%;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .item-list {
+    margin-bottom: 30px;
+
+    .item-row {
+      background-color: #CFE2FC;
+      margin-left: 30px;
+
+      .name {
+        width: 50%;
+      }
+      .delivery {
+        width: 35%;
+      }
+      .cost {
+        width: 5%;
+      }
+    }
+  }
+
+  .cost-summary {
+    .total {
+      margin-top: 30px;
+      font-size: 2.5em;
+    }
+  }
+}
+
+#place-order-button {
+  font-size: 1.8em;
+  font-weight: bold;
+}
 
 /* wrapper for welcome page */
 #welcome {
