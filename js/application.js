@@ -1,9 +1,4 @@
 $(document).ready(function() {
-	$("#set-quantities").hide();
-	$("#set-suppliers").hide();
-	$("#main").hide();
-	$("#active-shipments").hide();
-	$("#order-history").hide();
 
 	$(".next-button").bind("click", function() {
 
@@ -83,6 +78,11 @@ $(document).ready(function() {
 	$('.remove-button').bind("click", function() {
 		var row = $(this).closest(".item-row");
 		row.hide(200);
+	});
+
+	$('#home-button').bind("click", function() {
+		hideAll();
+		$("#welcome").show(200);
 	});
 
 	$('.new-order-btn').bind("click", function() {

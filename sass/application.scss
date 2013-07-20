@@ -8,8 +8,15 @@ body {
   float: none !important;
 }
 
+#home-button {
+  float: left;
+  font-size: 2.0em;
+  padding: 7px 10px;
+  margin-right: 20px;
+  margin-top: -5px;
+}
+
 #breadcrumbs {
-  // overflow: auto;
 
   .segment {
     width: 100px;
@@ -43,7 +50,7 @@ body {
   min-width: 768px;
 }
 
-#set-quantities, #set-suppliers {
+#set-quantities, #set-suppliers, #main, #active-shipments, #order-history {
   display: none;
 }
 
@@ -91,6 +98,7 @@ body {
     font-size: 1.8em;
   }
   .subtext {
+    margin-left: 3px;
     margin-top: 7px;
     font-size: 0.8;
     color: #666;
