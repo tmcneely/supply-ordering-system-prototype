@@ -229,6 +229,43 @@ i.supplier-dropdown-button {
     .next-button {
       margin-top: 50px;
     }
+
+    .suppliers {
+      .item-row {
+        background-color: #fafafa;
+        border: 2px solid #2B78E4;
+        width: 50%;
+        margin-left: 22%;
+        i.arrow {
+          font-size: 1.5em;
+          margin-left: 5px;
+        }
+        &:hover {
+          cursor: pointer;
+          background-color: #F0F0FE;
+          i.arrow {
+            color: blue;
+          }
+        }
+        &:active {
+          background-color: #AFC2FF;
+        }
+
+        .row-inner {
+          width: 194%;
+        }
+        .cost {
+          margin-left: 2%;
+          // width: 30% !important;
+        }
+        // .delivery {
+        //   width: 38% !important;
+        // }
+        // .supplier {
+        //   width: 26% !important;
+        // }
+      }
+    }
 }
 
 #set-quantities {
