@@ -6,10 +6,10 @@
 
 	<title>Teashop Supply Ordering System</title>
 
-	<link rel="stylesheet" href="css/application.css" />
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
   <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" /> -->
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/application.css" />
 
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -912,10 +912,26 @@
   <div id='welcome'>
      <h1 id='title-greeting'>Tea Shop Inventory System</h1>
       <div id='welcome-buttons'>
-          <button class="new-order-btn" type="button">Create New Order</button>
-          <button class="saved-order-btn" type="button" disabled>Resume Saved Order</button><br />
-          <button class="incoming-shipment-btn" type="button">View Incoming Shipments (3 active)</button>
-          <button class="order-history-btn" type="button">Review Order History</button>
+        <div>
+          <button class="new-order-btn button" type="button">
+            <i class="icon-plus"></i>
+            <div>Create New Order</div>
+          </button>
+          <button class="saved-order-btn button" type="button" disabled>
+            <i class="icon-edit"></i>
+            <div>Resume Saved Order</div>
+          </button>
+        </div>
+        <div>
+          <button class="incoming-shipment-btn button" type="button">
+            <i class="icon-truck"></i>
+            <div>Incoming Shipments (3 active)</div>
+          </button>
+          <button class="order-history-btn button" type="button">
+            <i class="icon-book"></i>
+            <div>Review Order History</div>
+          </button>
+        </div>
       </div>
     </div>
   </div>
