@@ -153,13 +153,21 @@ body {
 
     .row-button {
       display: inline-block;
-      background-color: #fff;
+      background-color: #fcfcfc;
       margin-top: 4px;
       padding: 8px 10px;
       border: 1px solid #999;
       border-radius: 8px;
       margin-right: 10px;
       box-shadow: #444 1px 1px 2px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #eee;
+      }
+      &:active {
+        background-color: #aaa;
+      }
     }
     .remove-button {
       font-size: 1.1em;
