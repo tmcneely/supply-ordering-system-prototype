@@ -644,26 +644,26 @@ i.supplier-dropdown-button {
     &:hover {
         background:#d5d5d5;
     }
+
+    i {
+      font-size: 2.2em;
+      display: inline-block;
+      margin-right: 15px;
+      vertical-align: middle;
+      -webkit-transition: -webkit-transform 0.7s ease;
+    }
 	}
 
 	.collapse-open {
 		background:#f0f0f0;
 
-    span {
-      padding: 10px;
-      margin-right: 10px;
-      background:url(../img/black-chevron-down.png) center center no-repeat;
+    i {
+      -webkit-transform: rotate(90deg);
     }
 	}
 
 	.collapse-close {
 		background:#ffffff;
-
-    span {
-      padding: 10px;
-      margin-right: 10px;
-      background:url(../img/black-chevron-right.png) center center no-repeat;
-    }
 	}
 
 	.container {
