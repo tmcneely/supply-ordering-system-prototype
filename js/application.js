@@ -4,14 +4,14 @@ $(document).ready(function() {
 
 	  var currentBreadcrumb = $("#breadcrumbs").find(".active");
 	  var currentSection = currentBreadcrumb.attr("data-section");
-	  $('#'+currentSection).hide(200);
+	  $('#'+currentSection).fadeOut(200);
 	  currentBreadcrumb.removeClass("active");
 
 	  if(currentSection == "view-summary") return;
 
 	  var nextBreadcrumb = currentBreadcrumb.next();
 	  var nextSection = nextBreadcrumb.attr("data-section");
-	  $('#'+nextSection).show(200);
+	  $('#'+nextSection).fadeIn(200);
 	  nextBreadcrumb.addClass("active");
 	});
 
@@ -61,12 +61,12 @@ $(document).ready(function() {
 	$(".segment.items, .segment.quantities, .segment.suppliers, .segment.summary").bind("click", function() {
 		var currentBreadcrumb = $("#breadcrumbs").find(".active");
 		var currentSection = currentBreadcrumb.attr("data-section");
-		$('#'+currentSection).hide(200);
+		$('#'+currentSection).fadeOut(200);
 		currentBreadcrumb.removeClass("active");
 
 		var nextBreadcrumb = $(this);
 		var nextSection = nextBreadcrumb.attr("data-section");
-		$('#'+nextSection).show(200);
+		$('#'+nextSection).fadeIn(200);
 		nextBreadcrumb.addClass("active");
 	});
 
@@ -82,12 +82,12 @@ $(document).ready(function() {
 
 	$('#home-button').bind("click", function() {
 		hideAll();
-		$("#welcome").show(200);
+		$("#welcome").fadeIn(200);
 	});
 
 	$('.new-order-btn').bind("click", function() {
 		hideAll();
-		$("#main").show(200);
+		$("#main").fadeIn(200);
 	});
 
 	$('.saved-order-btn').bind("click", function() {
@@ -96,12 +96,12 @@ $(document).ready(function() {
 
 	$('.incoming-shipment-btn').bind("click", function() {
 		hideAll();
-		$("#active-shipments").show(200);
+		$("#active-shipments").fadeIn(200);
 	});
 
 	$('.order-history-btn').bind("click", function() {
 		hideAll();
-		$("#order-history").show(200);
+		$("#order-history").fadeIn(200);
 	});
 
     $('.shipment-details-link').bind("click", function() {
