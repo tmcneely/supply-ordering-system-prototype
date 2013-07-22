@@ -22,33 +22,27 @@ $(document).ready(function() {
 		var num = Number($("div[data-id=" +id+ "] .quantity").text());
 		num--;
 
-		var cost = Number($("div[data-id=" +id+ "] .cost .number").text())/num;
-		if(num == 0){
-			cost = 0;
-		}
+
+		var cost = Number($("div[data-id=" +id+ "] .cost").attr("data-value"));
+		// var cost = Number($("div[data-id=" +id+ "] .cost .number").text())/num;
+		// if(num == 0){
+		// 	cost = 0;
+		// }
 		var per_order = $("div[data-id=" +id+ "] .per-order .number").text();
-		// var unit = $("div[data-id=" +id+ "] .per-order .unit").text();
 
 		if(num >=0) {
 			$("div[data-id=" +id+ "] .quantity").text(num);
 			$("div[data-id=" +id+ "] .total-amount .number").text(num*per_order);
 			$("div[data-id=" +id+ "] .cost .number").text(num*cost);
 		}
-
-		// var num = $(".quantity").text();
-		// num--;
-		// if(num >=0) {
-		// 	$(".quantity").text(num);
-		// 	$(".total-amount .text").text(num*50);
-		// 	$(".cost .text").text("$" + num*4);
-		// }
 	});
 
 	$(".icon-plus").bind("click", function() {
 		var row = $(this).closest(".item-row");
 		var id = row.attr("data-id");
 		var num = $("div[data-id=" +id+ "] .quantity").text();
-		var cost = Number($("div[data-id=" +id+ "] .cost .number").text())/num;
+		var cost = Number($("div[data-id=" +id+ "] .cost").attr("data-value"));
+		// var cost = Number($("div[data-id=" +id+ "] .cost .number").text())/num;
 		
 		num++;
 
@@ -111,6 +105,25 @@ $(document).ready(function() {
     $('.shipment-morelink').bind("click", function() {
         $('.shipment-morelink').slideUp("fast", "linear", function () { $('#active-shipments').find('.more').slideDown(400, "swing", null); });
     });
+
+    $('.collapsible').click(function(){
+	    $('suppliers').slideToggle('slow');
+	});
+
+	$('.suppliers').bind("click", function(){
+		var row = $('.collapsible');
+		var old_delivery = row.find(".delivery .text").text();
+		var old_supplier = row.find(".supplier .text").text();
+		var new_delivery = $(this).find(".delivery .text").text();
+		var new_supplier = $(this).find(".supplier .text").text();
+
+		row.find(".delivery .text").text(new_delivery);
+		row.find(".supplier .text").text(new_supplier);
+		$(this).find(".delivery .text").text(old_delivery);
+		$(this).find(".supplier .text").text(old_supplier);
+
+		$('.suppliers').slideToggle('slow');
+	});
 
     $('.shipment-details-supplier').tooltip();
 
