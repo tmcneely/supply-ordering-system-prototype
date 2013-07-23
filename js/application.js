@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	var undoStack = new Array();
+	var redoStack = new Array();
+
+	function clearUndo() {
+		undoStack = new Array();
+		redoStack = new Array();
+		$('.undo-button').addClass('disabled');
+		$('.redo-button').addClass('disabled');
+	}
+
 	$(".next-button").bind("click", function() {
 
 	  var currentBreadcrumb = $("#breadcrumbs").find(".active");
@@ -13,6 +23,7 @@ $(document).ready(function() {
 	  var nextSection = nextBreadcrumb.attr("data-section");
 	  $('#'+nextSection).fadeIn(200);
 	  nextBreadcrumb.addClass("active");
+	  clearUndo();
 	});
 
 	$(".icon-minus").bind("click", function() {
@@ -62,6 +73,7 @@ $(document).ready(function() {
 		var nextSection = nextBreadcrumb.attr("data-section");
 		$('#'+nextSection).fadeIn(200);
 		nextBreadcrumb.addClass("active");
+		clearUndo();
 	});
 
 	//collapsible management
@@ -71,12 +83,39 @@ $(document).ready(function() {
 
 	$('.remove-button').bind("click", function() {
 		var row = $(this).closest(".item-row");
+		undoStack.push(row);
+		$('.undo-button').removeClass('disabled');
 		row.hide(200);
+	});
+
+	$('.undo-button').bind('click', function() {
+		if (undoStack.length > 0) {
+			var div = undoStack.pop();
+			redoStack.push(div);
+			div.show(200);
+			$('.redo-button').removeClass('disabled');
+			if (undoStack.length == 0) {
+				$('.undo-button').addClass('disabled');
+			}
+		}
+	});
+
+	$('.redo-button').bind('click', function() {
+		if (redoStack.length > 0) {
+			var div = redoStack.pop();
+			undoStack.push(div);
+			div.hide(200);
+			$('.undo-button').removeClass('disabled');
+			if (redoStack.length == 0) {
+				$('.redo-button').addClass('disabled');
+			}
+		}
 	});
 
 	$('.home-button').bind("click", function() {
 		hideAll();
 		$("#welcome").fadeIn(200);
+		clearUndo();
 	});
 
 	$('.new-order-btn').bind("click", function() {
