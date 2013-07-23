@@ -8,7 +8,7 @@ body {
   float: none !important;
 }
 
-.home-button {
+.home-button.button {
   float: left;
   font-size: 2.0em;
   padding: 7px 10px;
@@ -29,6 +29,7 @@ body {
     box-shadow: #444 1px 1px 2px;
     font-size: 1.1em;
     font-weight: bold;
+    -webkit-user-select: none;
 
     &:first-child {
       border-radius: 6px 0 0 6px;
@@ -82,6 +83,7 @@ body {
   border-radius: 8px;
   border: 1px solid #ccc;
   box-shadow: #444 1px 1px 2px;
+  -webkit-user-select: none;
 
   &:hover {
     background-color: #eee;
@@ -109,6 +111,7 @@ body {
   border-radius: 8px;
   margin-right: 10px;
   box-shadow: #444 1px 1px 2px;
+  -webkit-user-select: none;
 
   &:hover {
     cursor: pointer;
@@ -132,6 +135,7 @@ body {
   border: 1px solid #aaa;
   box-shadow: 1px 1px 2px black;
   position: relative;
+  -webkit-user-select: none;
 
   .help-box {
     visibility: hidden;
@@ -190,12 +194,15 @@ body {
 .icn-btn {
   width: 75px;
   background-color: #f5f5f5;
-  border: 1px solid #f0f0f0;
+  border: 1px solid #ccc;
+  box-shadow: #999 1px 1px 1px;
   border-radius: 15px;
   text-align: center;
   display: inline-block;
   margin: 0 10px 30px;
   padding: 10px 0;
+  -webkit-user-select: none;
+  -webkit-transition: 0.2s ease color, 0.2s ease background-color, 0.2s ease box-shadow, 0.2s ease border-color;
 
   &:hover {
     cursor: pointer;
@@ -203,6 +210,13 @@ body {
   }
   &:active {
     background-color: #ccc;
+  }
+  &.disabled {
+    cursor: default;
+    box-shadow: none;
+    color: #aaa;
+    border-color: #eee;
+    background-color: #f5f5f5;
   }
 
   i {
@@ -278,8 +292,26 @@ i.supplier-dropdown-button {
       clear: both;
       margin-top: 30px;
 
-      .item-row {
-        
+      .item > .item-row {
+        .supplier {
+          &:hover {
+            cursor: pointer;
+            color: #048;
+          }
+          &:active {
+            color: #00f;
+          }
+
+        }
+      }
+
+      .supplier-dropdown-button {
+        &.disabled {
+          color: #aaa;
+        }
+        &.active {
+          color: #00f;
+        }
       }
 
       .name {
@@ -304,6 +336,7 @@ i.supplier-dropdown-button {
     }
 
     .suppliers {
+      display: none;
       .item-row {
         background-color: #fafafa;
         border: 2px solid #2B78E4;
@@ -347,7 +380,7 @@ i.supplier-dropdown-button {
     width: 25%;
   }
   .per-order {
-    width: 20%
+    width: 15%
   }
   .number {
     width: 25%;
@@ -356,7 +389,7 @@ i.supplier-dropdown-button {
     width: 20%;
   }
   .cost {
-    width: 10%;
+    width: 5%;
   }
 
   .plus-minus-button {
@@ -600,11 +633,13 @@ i.supplier-dropdown-button {
   .recommendation {
     padding: 20px;
     width: 700px;
+    height: auto;
     background-color: #E4F1DF;
     margin-top: 20px;
     border-radius: 8px;
 
     .text {
+      margin-top: 0;
       font-size: 1.2em;
 
       .text-bullet {

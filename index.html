@@ -47,11 +47,11 @@
             <i class="icon-star"></i>
             <div>Favorites</div>
           </div>
-          <div class="icn-btn">
+          <div class="icn-btn undo-button disabled">
             <i class="icon-undo"></i>
             <div>Undo</div>
           </div>
-          <div class="icn-btn">
+          <div class="icn-btn redo-button disabled">
             <i class="icon-rotate-right"></i>
             <div>Redo</div>
           </div>
@@ -104,7 +104,7 @@
           </div>
         </div>
         <div class="item">
-          <div class="item-row collapsible">
+          <div class="item-row">
             <div class="row-inner">
               <div class='name'>
                 <div class='text'>Tea Maker (x1)</div>
@@ -141,6 +141,20 @@
                 </div>
               </div>
             </div>
+            <div class="item-row">
+              <div class="row-inner">
+                <div class='cost'>
+                  <div class='text'>$18</div>
+                </div>
+                <div class='delivery'>
+                  <div class='text'>3 days</div>
+                </div>
+                <div class='supplier'>
+                  <div class="text">Supplier D</div>
+                  <i class="icon-arrow-up arrow"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="item-row">
@@ -156,7 +170,7 @@
             </div>
             <div class='supplier'>
               <div class="text">Supplier A</div>
-              <i class="icon-caret-down supplier-dropdown-button"></i>
+              <i class="icon-caret-down supplier-dropdown-button disabled"></i>
             </div>
             <div class="row-buttons">
               <div class="row-button remove-button">
@@ -165,24 +179,42 @@
             </div>
           </div>
         </div>
-        <div class="item-row">
-          <div class="row-inner">
-            <div class='name'>
-              <div class='text'>Vanilla Syrup (1L)</div>
+        <div class="item">
+          <div class="item-row">
+            <div class="row-inner">
+              <div class='name'>
+                <div class='text'>Vanilla Syrup (1L)</div>
+              </div>
+              <div class='cost'>
+                <div class='text'>$5</div>
+              </div>
+              <div class='delivery'>
+                <div class='text'>3 days</div>
+              </div>
+              <div class='supplier'>
+                <div class="text">Supplier C</div>
+                <i class="icon-caret-down supplier-dropdown-button"></i>
+              </div>
+              <div class="row-buttons">
+                <div class="row-button remove-button">
+                  <i class="icon-remove"></i>
+                </div>
+              </div>
             </div>
-            <div class='cost'>
-              <div class='text'>$5</div>
-            </div>
-            <div class='delivery'>
-              <div class='text'>3 days</div>
-            </div>
-            <div class='supplier'>
-              <div class="text">Supplier C</div>
-              <i class="icon-caret-down supplier-dropdown-button"></i>
-            </div>
-            <div class="row-buttons">
-              <div class="row-button remove-button">
-                <i class="icon-remove"></i>
+          </div>
+          <div class="suppliers">
+            <div class="item-row">
+              <div class="row-inner">
+                <div class='cost'>
+                  <div class='text'>$7</div>
+                </div>
+                <div class='delivery'>
+                  <div class='text'>2 days</div>
+                </div>
+                <div class='supplier'>
+                  <div class="text">Supplier B</div>
+                  <i class="icon-arrow-up arrow"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -204,11 +236,11 @@
       <div class="top-bar">
         <h3 class="page-title">Select Quantities</h3>
         <div class="buttons">
-          <div class="icn-btn">
+          <div class="icn-btn undo-button disabled">
             <i class="icon-undo"></i>
             <div>Undo</div>
           </div>
-          <div class="icn-btn">
+          <div class="icn-btn redo-button disabled">
             <i class="icon-rotate-right"></i>
             <div>Redo</div>
           </div>
@@ -245,6 +277,11 @@
             <div class='cost' data-value='4'>
               <div class='text'>$<span class="number">12</span></div>
             </div>
+            <div class="row-buttons">
+              <div class="row-button remove-button">
+                <i class="icon-remove"></i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="item-row" data-id="2">
@@ -266,6 +303,11 @@
             <div class='cost' data-value='4'>
               <div class='text'>$<span class="number">16</span></div>
             </div>
+            <div class="row-buttons">
+              <div class="row-button remove-button">
+                <i class="icon-remove"></i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="item-row" data-id="3">
@@ -274,7 +316,7 @@
               <div class='text'>Tea Maker</div>
             </div>
             <div class='per-order'>
-              <div class="text"><span class="number">1<span><span class="unit"></span></div>
+              <div class="text"><span class="number">1</span><span class="unit"></span></div>
             </div>
             <div class='number'>
               <i class="icon-minus button plus-minus-button"></i>
@@ -286,6 +328,11 @@
             </div>
             <div class='cost' data-value='25'>
               <div class='text'>$<span class="number">25</span></div>
+            </div>
+            <div class="row-buttons">
+              <div class="row-button remove-button">
+                <i class="icon-remove"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -307,6 +354,11 @@
             </div>
             <div class='cost' data-value='10'>
               <div class='text'>$<span class="number">10</span></div>
+            </div>
+            <div class="row-buttons">
+              <div class="row-button remove-button">
+                <i class="icon-remove"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -337,11 +389,11 @@
       <div class="top-bar">
         <h3 class="page-title">Select Suppliers</h3>
         <div class="buttons">
-          <div class="icn-btn">
+          <div class="icn-btn undo-button disabled">
             <i class="icon-undo"></i>
             <div>Undo</div>
           </div>
-          <div class="icn-btn">
+          <div class="icn-btn redo-button disabled">
             <i class="icon-rotate-right"></i>
             <div>Redo</div>
           </div>
@@ -521,12 +573,12 @@
 
       <div class="recommendations">
         <h4>Recommendations</h4>
-        <div class="recommendation">  
+        <div class="recommendation item-row">  
           <div class="buttons">
             <div class="button yes-button">
               <i class="icon-thumbs-up"></i>
             </div>
-            <div class="button no-button">
+            <div class="button remove-button">
               <i class="icon-remove"></i>
             </div>
           </div>
@@ -542,12 +594,12 @@
             </div>
           </div>
         </div>
-        <div class="recommendation">  
+        <div class="recommendation item-row">  
           <div class="buttons">
             <div class="button yes-button">
               <i class="icon-thumbs-up"></i>
             </div>
-            <div class="button no-button">
+            <div class="button remove-button">
               <i class="icon-remove"></i>
             </div>
           </div>
@@ -592,11 +644,11 @@
       <div class="top-bar">
         <h3 class="page-title">Order Summary</h3>
         <div class="buttons">
-          <div class="icn-btn">
+          <div class="icn-btn undo-button disabled disabled">
             <i class="icon-undo"></i>
             <div>Undo</div>
           </div>
-          <div class="icn-btn">
+          <div class="icn-btn redo-button disabled disabled">
             <i class="icon-rotate-right"></i>
             <div>Redo</div>
           </div>

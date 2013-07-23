@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	var undoStack = new Array();
+	var redoStack = new Array();
+
+	function clearUndo() {
+		undoStack = new Array();
+		redoStack = new Array();
+		$('.undo-button').addClass('disabled');
+		$('.redo-button').addClass('disabled');
+	}
+
 	$(".next-button").bind("click", function() {
 
 	  var currentBreadcrumb = $("#breadcrumbs").find(".active");
@@ -13,6 +23,7 @@ $(document).ready(function() {
 	  var nextSection = nextBreadcrumb.attr("data-section");
 	  $('#'+nextSection).fadeIn(200);
 	  nextBreadcrumb.addClass("active");
+	  clearUndo();
 	});
 
 	$(".icon-minus").bind("click", function() {
@@ -62,6 +73,7 @@ $(document).ready(function() {
 		var nextSection = nextBreadcrumb.attr("data-section");
 		$('#'+nextSection).fadeIn(200);
 		nextBreadcrumb.addClass("active");
+		clearUndo();
 	});
 
 	//collapsible management
@@ -71,12 +83,39 @@ $(document).ready(function() {
 
 	$('.remove-button').bind("click", function() {
 		var row = $(this).closest(".item-row");
+		undoStack.push(row);
+		$('.undo-button').removeClass('disabled');
 		row.hide(200);
+	});
+
+	$('.undo-button').bind('click', function() {
+		if (undoStack.length > 0) {
+			var div = undoStack.pop();
+			redoStack.push(div);
+			div.show(200);
+			$('.redo-button').removeClass('disabled');
+			if (undoStack.length == 0) {
+				$('.undo-button').addClass('disabled');
+			}
+		}
+	});
+
+	$('.redo-button').bind('click', function() {
+		if (redoStack.length > 0) {
+			var div = redoStack.pop();
+			undoStack.push(div);
+			div.hide(200);
+			$('.undo-button').removeClass('disabled');
+			if (redoStack.length == 0) {
+				$('.redo-button').addClass('disabled');
+			}
+		}
 	});
 
 	$('.home-button').bind("click", function() {
 		hideAll();
 		$("#welcome").fadeIn(200);
+		clearUndo();
 	});
 
 	$('.new-order-btn').bind("click", function() {
@@ -98,31 +137,50 @@ $(document).ready(function() {
 		$("#order-history").fadeIn(200);
 	});
 
-    $('.shipment-details-link').bind("click", function() {
-        $('.shipment-late').slideUp();
-    });
+  $('.shipment-details-link').bind("click", function() {
+      $('.shipment-late').slideUp();
+  });
 
-    $('.shipment-morelink').bind("click", function() {
-        $('.shipment-morelink').slideUp("fast", "linear", function () { $('#active-shipments').find('.more').slideDown(400, "swing", null); });
-    });
+  $('.shipment-morelink').bind("click", function() {
+      $('.shipment-morelink').slideUp("fast", "linear", function () { $('#active-shipments').find('.more').slideDown(400, "swing", null); });
+  });
 
-    $('.collapsible').click(function(){
-	    $('suppliers').slideToggle('slow');
+  $('#current-items .item-row .supplier').click(function(){
+  	var supplierDiv = $(this).parents('.item').find('.suppliers')[0];
+  	if ($(supplierDiv).css('display') == 'none') {
+	    $(supplierDiv).slideDown(400);
+	    $(this).find('.supplier-dropdown-button').addClass('active');
+	  } else {
+	    $(supplierDiv).slideUp(400);
+	    $(this).find('.supplier-dropdown-button').removeClass('active');
+	  }
 	});
 
-	$('.suppliers').bind("click", function(){
-		var row = $('.collapsible');
-		var old_delivery = row.find(".delivery .text").text();
-		var old_supplier = row.find(".supplier .text").text();
+	$('#current-items .suppliers .item-row').bind("click", function(){
+		var row = $(this).parents('.item').children('.item-row')[0];
+		var old_cost = $(row).find(".cost .text").text();
+		var old_delivery = $(row).find(".delivery .text").text();
+		var old_supplier = $(row).find(".supplier .text").text();
+		var new_cost = $(this).find(".cost .text").text();
 		var new_delivery = $(this).find(".delivery .text").text();
 		var new_supplier = $(this).find(".supplier .text").text();
 
-		row.find(".delivery .text").text(new_delivery);
-		row.find(".supplier .text").text(new_supplier);
-		$(this).find(".delivery .text").text(old_delivery);
-		$(this).find(".supplier .text").text(old_supplier);
+		$(this).parents('.suppliers').slideUp(400);
+		$(row).find('.supplier-dropdown-button').removeClass('active');
+		var _this = this;
 
-		$('.suppliers').slideToggle('slow');
+		$(row).find('.cost, .delivery, .supplier').find('.text').fadeOut(200, function() { 
+			$(row).find(".cost .text").text(new_cost);
+			$(row).find(".delivery .text").text(new_delivery);
+			$(row).find(".supplier .text").text(new_supplier);
+
+			$(this).fadeIn(200, function() {
+				$(_this).find(".cost .text").text(old_cost);
+				$(_this).find(".delivery .text").text(old_delivery);
+				$(_this).find(".supplier .text").text(old_supplier);
+			});
+
+		});
 	});
 
     $('.shipment-details-supplier').tooltip();
