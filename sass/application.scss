@@ -280,8 +280,26 @@ i.supplier-dropdown-button {
       clear: both;
       margin-top: 30px;
 
-      .item-row {
-        
+      .item > .item-row {
+        .supplier {
+          &:hover {
+            cursor: pointer;
+            color: #048;
+          }
+          &:active {
+            color: #00f;
+          }
+
+        }
+      }
+
+      .supplier-dropdown-button {
+        &.disabled {
+          color: #aaa;
+        }
+        &.active {
+          color: #00f;
+        }
       }
 
       .name {
@@ -306,6 +324,7 @@ i.supplier-dropdown-button {
     }
 
     .suppliers {
+      display: none;
       .item-row {
         background-color: #fafafa;
         border: 2px solid #2B78E4;
