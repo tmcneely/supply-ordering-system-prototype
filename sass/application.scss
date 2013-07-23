@@ -8,7 +8,7 @@ body {
   float: none !important;
 }
 
-#home-button {
+.home-button {
   float: left;
   font-size: 2.0em;
   padding: 7px 10px;
@@ -70,8 +70,10 @@ body {
 
 .page-title {
   float: left;
-  margin-right: 20px;
+  font-family: Verdana, Geneva, sans-serif;
   line-height: 1.8;
+  margin-right: 20px;
+  text-shadow: #ccc 1px 1px;
 }
 
 .button {
@@ -253,11 +255,6 @@ i.supplier-dropdown-button {
   .row-inner > * {
     text-decoration: underline;
   }
-}
-
-.page-title {
-  font-family: Verdana, Geneva, sans-serif;
-  text-shadow: #ccc 1px 1px;
 }
 
 #add-items {
@@ -499,7 +496,6 @@ i.supplier-dropdown-button {
     margin-bottom: 20px;
   }
   
-  
   #welcome-buttons {
   
   }
@@ -520,7 +516,6 @@ i.supplier-dropdown-button {
   }
 }
 
-
 /* active shipments css */
 #active-shipments {
   margin: 20px 3%;
@@ -529,6 +524,20 @@ i.supplier-dropdown-button {
 
   h1 {
       font-family: Verdana, Geneva, sans-serif;
+  }
+
+  .top-bar {
+
+    .page-title {
+      line-height: 1.0;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    #order-search {
+      float: right;
+      vertical-align: middle;
+    }
   }
 
   h3.shipment {
@@ -615,31 +624,28 @@ i.supplier-dropdown-button {
   }
 }
 
-
 #order-history {
   margin: 20px 3%;
   padding-bottom: 50px;
   min-width: 768px;
 
-	#order-history-header {
-		clear: both;
-		display: block;
+  .top-bar {
 
-    h1 {
-      float:left;
-      font-family: Verdana, Geneva, sans-serif;
+    .page-title {
+      line-height: 1.0;
+      margin: 0;
+      vertical-align: middle;
     }
 
-		#order-search {
-			float: right;
-      margin-top: 18px;
-//			display: block;
-		}
-	}
+    #order-search {
+      vertical-align: middle;
+      float: right;
+    }
+  }
 
-	.collapsible {
-		padding:10pt;
-		height:20pt;
+  .collapsible {
+    padding:10pt;
+    height:20pt;
 
     &:hover {
         background:#d5d5d5;
@@ -654,31 +660,31 @@ i.supplier-dropdown-button {
     }
 	}
 
-	.collapse-open {
-		background:#f0f0f0;
+  .collapse-open {
+    background:#f0f0f0;
 
     i {
       -webkit-transform: rotate(90deg);
     }
 	}
 
-	.collapse-close {
-		background:#ffffff;
-	}
+  .collapse-close {
+    background:#ffffff;
+  }
 
-	.container {
+  .container {
     background:#f0f0f0;
-		padding:0;
-		margin:0;
+    padding:0;
+    margin:0;
     width: 100%;
-	}
+  }
 
-	.content {
-		margin: 0;
-		padding:10px;
-		font-size:.9em;
-		line-height:1.5em;
-		background:#f0f0f0;
+  .content {
+    margin: 0;
+    padding:10px;
+    font-size:.9em;
+    line-height:1.5em;
+    background:#f0f0f0;
 
       .supplier-row {
 

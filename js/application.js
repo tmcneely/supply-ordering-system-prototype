@@ -74,7 +74,7 @@ $(document).ready(function() {
 		row.hide(200);
 	});
 
-	$('#home-button').bind("click", function() {
+	$('.home-button').bind("click", function() {
 		hideAll();
 		$("#welcome").fadeIn(200);
 	});
