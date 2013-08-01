@@ -51,6 +51,22 @@ body {
   }
 }
 
+.search-item {
+  display: none;
+  padding: 5px 10px;
+  width: 30%;
+  box-shadow: black 0 1px 3px;
+  position: absolute;
+  top: 139px;
+  left: 215px;
+  font-size: 1.1em;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #CFE2FC;
+  }
+}
+
 #main {
   margin: 20px 3%;
   padding-bottom: 50px;

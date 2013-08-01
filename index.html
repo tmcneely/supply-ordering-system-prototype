@@ -41,7 +41,10 @@
     <div id='add-items'>
       <div class="top-bar">
         <h3 class="page-title">Add Items</h3>
-            <input id="search" type="text" class="search-query" placeholder="Search for items">
+            <input id="search" type="text" class="search-query" placeholder="Search for items" oninput="
+            if ($(this).val() == 'cu') {
+              $('.search-item').show(200);
+            }">
         <div class="buttons">
           <div class="icn-btn">
             <i class="icon-star"></i>
@@ -57,6 +60,9 @@
           </div>
         </div>
       </div>
+      <div class='search-item' onclick="$(this).hide(200); $('#cups-item').show(200)">
+        Cups (x150)
+      </div>
 
       <div id="recommendations">
         <div class="header-row">
@@ -71,7 +77,7 @@
               Milk (4L)
             </div>
             <div class="row-buttons">
-              <div class="row-button add-button">Add Item</div>
+              <div class="row-button add-button" onclick="$(this).parents('.item-row').hide(200); $('#milk-item').show(200)">Add Item</div>
               <div class="row-button remove-button">
                 <i class="icon-remove"></i>
               </div>
@@ -81,7 +87,7 @@
         <div class="item-row">
           <div class="row-inner">
             <div class="name text">
-              Cups (x50)
+              Honey (500mL)
             </div>
             <div class="row-buttons">
               <div class="row-button add-button">Add Item</div>
@@ -103,6 +109,87 @@
             <div class='clear'></div>
           </div>
         </div>
+
+        <div id="cups-item" class="item" style="display:none">
+          <div class="item-row">
+            <div class="row-inner">
+              <div class='name'>
+                <div class='text'>Cups (x150)</div>
+              </div>
+              <div class='cost'>
+                <div class='text'>$12</div>
+              </div>
+              <div class='delivery'>
+                <div class='text'>2 days</div>
+              </div>
+              <div class='supplier'>
+                <div class="text">Supplier A</div>
+                <i class="icon-caret-down supplier-dropdown-button"></i>
+              </div>
+              <div class="row-buttons">
+                <div class="row-button remove-button">
+                  <i class="icon-remove"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="suppliers">
+            <div class="item-row">
+              <div class="row-inner">
+                <div class='cost'>
+                  <div class='text'>$15</div>
+                </div>
+                <div class='delivery'>
+                  <div class='text'>2 days</div>
+                </div>
+                <div class='supplier'>
+                  <div class="text">Supplier B</div>
+                  <i class="icon-arrow-up arrow"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="milk-item" class="item" style="display:none">
+          <div class="item-row">
+            <div class="row-inner">
+              <div class='name'>
+                <div class='text'>Milk (4L)</div>
+              </div>
+              <div class='cost'>
+                <div class='text'>$4</div>
+              </div>
+              <div class='delivery'>
+                <div class='text'>2 days</div>
+              </div>
+              <div class='supplier'>
+                <div class="text">Supplier B</div>
+                <i class="icon-caret-down supplier-dropdown-button"></i>
+              </div>
+              <div class="row-buttons">
+                <div class="row-button remove-button">
+                  <i class="icon-remove"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="suppliers">
+            <div class="item-row">
+              <div class="row-inner">
+                <div class='cost'>
+                  <div class='text'>$5</div>
+                </div>
+                <div class='delivery'>
+                  <div class='text'>1 day</div>
+                </div>
+                <div class='supplier'>
+                  <div class="text">Supplier E</div>
+                  <i class="icon-arrow-up arrow"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="item">
           <div class="item-row">
             <div class="row-inner">
@@ -110,7 +197,7 @@
                 <div class='text'>Tea Maker (x1)</div>
               </div>
               <div class='cost'>
-                <div class='text'>$20</div>
+                <div class='text'>$25</div>
               </div>
               <div class='delivery'>
                 <div class='text'>2 days</div>
@@ -264,7 +351,7 @@
               <div class='text'>Cups</div>
             </div>
             <div class='per-order'>
-              <div class="text"><span class="number">50</span><span class="unit"></span></div>
+              <div class="text"><span class="number">150</span><span class="unit"></span></div>
             </div>
             <div class='number'>
               <i class="icon-minus button plus-minus-button"></i>
@@ -272,7 +359,7 @@
               <i class="icon-plus button plus-minus-button"></i>
             </div>
             <div class='total-amount'>
-              <div class='text'><span class="number">150</span></div>
+              <div class='text'><span class="number">450</span></div>
             </div>
             <div class='cost' data-value='4'>
               <div class='text'>$<span class="number">12</span></div>
@@ -416,7 +503,7 @@
               <div class='text'>Tea Maker (x1)</div>
             </div>
             <div class='cost'>
-              <div class='text'>$20</div>
+              <div class='text'>$25</div>
             </div>
             <div class='delivery'>
               <div class='text'>2 days</div>
@@ -842,7 +929,7 @@
         </div>
         <div class="items-ordered-list">
           <div class="ordered-item">
-            <div class="name">Cups (x50)</div>
+            <div class="name">Cups (x150)</div>
             <div class="charge">$50</div>
           </div>
         </div>
@@ -879,7 +966,7 @@
         </div>
         <div class="items-ordered-list">
           <div class="ordered-item">
-            <div class="name">Cups (x50)</div>
+            <div class="name">Cups (x150)</div>
             <div class="charge">$50</div>
           </div>
         </div>
@@ -916,7 +1003,7 @@
         </div>
         <div class="items-ordered-list">
           <div class="ordered-item">
-            <div class="name">Cups (x50)</div>
+            <div class="name">Cups (x150)</div>
             <div class="charge">$50</div>
           </div>
         </div>
@@ -953,7 +1040,7 @@
         </div>
         <div class="items-ordered-list">
           <div class="ordered-item">
-            <div class="name">Cups (x50)</div>
+            <div class="name">Cups (x150)</div>
             <div class="charge">$50</div>
           </div>
         </div>
@@ -988,7 +1075,7 @@
             <i class="icon-plus"></i>
             <div>Create New Order</div>
           </button>
-          <button class="saved-order-btn button" type="button" disabled>
+          <button class="saved-order-btn button" type="button">
             <i class="icon-edit"></i>
             <div>Resume Saved Order</div>
           </button>

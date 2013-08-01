@@ -119,12 +119,12 @@ $(document).ready(function() {
 	});
 
 	$('.new-order-btn').bind("click", function() {
-		hideAll();
-		$("#main").fadeIn(200);
+		confirm("Are you sure you want to start a new order?\n(Current saved order will be cleared.)")
 	});
 
 	$('.saved-order-btn').bind("click", function() {
 		hideAll();
+		$("#main").fadeIn(200);
 	});
 
 	$('.incoming-shipment-btn').bind("click", function() {
