@@ -73,7 +73,7 @@ body {
   min-width: 768px;
 }
 
-#set-quantities, #set-suppliers, #order-summary, #main, #active-shipments, #order-history {
+#set-quantities, #set-suppliers, #order-summary, #main, #active-shipments, #order-history, #order-placed {
   display: none;
 }
 
@@ -673,6 +673,21 @@ i.supplier-dropdown-button {
         display: inline-block;
       }
     }
+  }
+}
+
+#order-placed-header {
+  margin-top: 100px;
+  text-align: center;
+}
+#order-placed {
+  .button {
+    width: 200px;
+    font-size: 1.2em;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    float: none;
   }
 }
 

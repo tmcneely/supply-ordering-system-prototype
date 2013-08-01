@@ -26,6 +26,11 @@ $(document).ready(function() {
 	  clearUndo();
 	});
 
+	$("#place-order-button").bind('click', function() {
+		hideAll();
+		$('#order-placed').fadeIn(200)
+	});
+
 	$(".icon-minus").bind("click", function() {
 		var row = $(this).closest(".item-row");
 		var id = row.attr("data-id");
@@ -191,5 +196,6 @@ $(document).ready(function() {
 		$("#main").hide();
 		$("#active-shipments").hide();
 		$("#order-history").hide();
+		$("#order-placed").hide();
 	}
 });
